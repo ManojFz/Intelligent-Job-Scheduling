@@ -1,0 +1,77 @@
+{
+  "solve_date": "2026-03-17",
+  "break_duration_min": 15,
+  "availableSlots": ["08-10", "10-12", "13-15", "15-17"],
+  "config": {
+    "workflow": { "status": "Enabled", "type": "Hard" },
+    "worklocation": { "status": "Enabled", "type": "Hard" },
+    "skill_match": { "status": "Enabled", "type": "Hard" },
+    "engineer_base_location": { "status": "Enabled", "type": "Soft" },
+    "engineer_end_location": { "status": "Disabled", "type": "Soft" },
+    "max_ticket_per_day": { "status": "Enabled", "type": "Hard" },
+    "rating": { "status": "Enabled", "type": "Soft" },
+    "overtime": { "status": "Enabled", "type": "Soft" },
+    "priority": { "status": "Enabled", "type": "Hard" },
+    "sla": { "status": "Enabled", "type": "Hard" }
+  },
+  "engineers": [
+    {
+      "engineer_id": "ENG001",
+      "base_location": { "lat": 12.9716, "lng": 77.5946 },
+      "shift_start": "09:00",
+      "shift_end": "18:00",
+      "break_window": { "start": "13:00", "end": "13:30" },
+      "overtime_allowed": true,
+      "skills": ["fiber", "electrical"],
+      "skill_ratings": { "fiber": 5, "electrical": 4 },
+      "max_jobs_per_shift": 4,
+      "workflows": ["Breakfix", "Installation"],
+      "locations": ["Hebbal", "Whitefield", "Koramangala"]
+    },
+    {
+      "engineer_id": "ENG002",
+      "base_location": { "lat": 12.9352, "lng": 77.6245 },
+      "shift_start": "09:00",
+      "shift_end": "18:00",
+      "break_window": { "start": "13:00", "end": "13:30" },
+      "overtime_allowed": true,
+      "skills": ["fiber", "network"],
+      "skill_ratings": { "fiber": 4, "network": 5 },
+      "max_jobs_per_shift": 4,
+      "workflows": ["Installation"],
+      "locations": ["Hebbal", "Whitefield"]
+    }
+  ],
+  "jobs": [
+    {
+      "job_id": "JOB-P1-01",
+      "location": { "lat": 12.98, "lng": 77.60 },
+      "location_name": "Hebbal",
+      "required_skills": ["fiber"],
+      "priority": "P1",
+      "sla_deadline": "2026-03-17T12:00:00",
+      "estimated_duration_min": 45,
+      "workflow_type": "Installation"
+    },
+    {
+      "job_id": "JOB-P2-01",
+      "location": { "lat": 12.965, "lng": 77.61 },
+      "location_name": "Whitefield",
+      "required_skills": ["fiber", "network"],
+      "priority": "P2",
+      "sla_deadline": "2026-03-17T16:00:00",
+      "estimated_duration_min": 60,
+      "workflow_type": "Installation"
+    },
+    {
+      "job_id": "JOB-P3-01",
+      "location": { "lat": 12.95, "lng": 77.62 },
+      "location_name": "Whitefield",
+      "required_skills": ["fiber"],
+      "priority": "P3",
+      "sla_deadline": "2026-03-17T17:30:00",
+      "estimated_duration_min": 30,
+      "workflow_type": "Installation"
+    }
+  ]
+}

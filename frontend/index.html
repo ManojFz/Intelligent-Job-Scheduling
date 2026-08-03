@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Route Optimization – Engineer Routes</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAv_5MxtaCZxTER1ldC-LnBP_q36vgjz7I&libraries=geometry" async defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Route Optimization</h1>
+    <p class="header-note">Use <strong>http://localhost:4200</strong> so the map loads (API key may be restricted to this origin).</p>
+    <div class="controls">
+      <label>
+        API base
+        <input type="text" id="apiBase" value="" placeholder="Leave empty if same server" />
+      </label>
+      <div class="actions">
+        <button type="button" id="loadSample">Load sample payload</button>
+        <button type="button" id="runOptimize" class="primary">Run optimization</button>
+        <button type="button" id="renderResult">Paste result & render</button>
+      </div>
+    </div>
+    <div class="payload-area">
+      <label>Input (payload JSON) or Result (output JSON) for "Paste result & render"</label>
+      <textarea id="jsonInput" rows="8" placeholder="Paste optimization input payload or result JSON here..."></textarea>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="summary" id="summary" hidden>
+      <h2>Summary</h2>
+      <div class="summary-grid" id="summaryGrid"></div>
+    </section>
+
+    <section class="map-section">
+      <h2>Routes on map</h2>
+      <div id="map" class="map"></div>
+      <div id="mapLegend" class="map-legend"></div>
+    </section>
+
+    <section class="engineers-section">
+      <h2>Assigned engineer routes</h2>
+      <div id="engineerCards" class="engineer-cards"></div>
+    </section>
+
+    <section class="unassigned-section" id="unassignedSection" hidden>
+      <h2 id="unassignedTitle">Unassigned jobs (0)</h2>
+      <div id="unassignedList" class="unassigned-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

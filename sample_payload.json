@@ -1,0 +1,106 @@
+{
+  "break_duration_min": 15,
+  "engineers": [
+    {
+      "engineer_id": "ENG001",
+      "base_location": { "lat": 12.9716, "lng": 77.5946 },
+      "shift_start": "09:00",
+      "shift_end": "18:00",
+      "break_window": { "start": "13:00", "end": "13:30" },
+      "overtime_allowed": true,
+      "skills": ["fiber", "electrical"],
+      "skill_ratings": { "fiber": 5, "electrical": 4 },
+      "max_jobs_per_shift": 8,
+      "workflows": ["Breakfix", "Installation"],
+      "locations": ["Hebbal", "Whitefield", "Koramangala"]
+    },
+    {
+      "engineer_id": "ENG002",
+      "base_location": { "lat": 12.9352, "lng": 77.6245 },
+      "shift_start": "09:00",
+      "shift_end": "18:00",
+      "break_window": { "start": "13:00", "end": "13:30" },
+      "overtime_allowed": true,
+      "skills": ["electrical"],
+      "skill_ratings": { "electrical": 5 },
+      "max_jobs_per_shift": 6,
+      "workflows": ["Breakfix"],
+      "locations": ["ECity", "HSR", "Koramangala"]
+    },
+    {
+      "engineer_id": "ENG003",
+      "base_location": { "lat": 13.001, "lng": 77.57 },
+      "shift_start": "09:00",
+      "shift_end": "18:00",
+      "break_window": { "start": "13:00", "end": "13:30" },
+      "overtime_allowed": true,
+      "skills": ["fiber", "network"],
+      "skill_ratings": { "fiber": 4, "network": 5 },
+      "max_jobs_per_shift": 6,
+      "workflows": ["Installation"],
+      "locations": ["Hebbal", "Whitefield"]
+    }
+  ],
+  "jobs": [
+    {
+      "job_id": "JOB1",
+      "location": { "lat": 12.98, "lng": 77.60 },
+      "location_name": "Hebbal",
+      "required_skills": ["fiber"],
+      "priority": "P1",
+      "sla_deadline": "2026-03-16T14:00:00",
+      "estimated_duration_min": 60,
+      "workflow_type": "Breakfix"
+    },
+    {
+      "job_id": "JOB2",
+      "location": { "lat": 12.99, "lng": 77.62 },
+      "location_name": "Whitefield",
+      "required_skills": ["fiber"],
+      "priority": "P2",
+      "sla_deadline": "2026-03-16T15:00:00",
+      "estimated_duration_min": 45,
+      "workflow_type": "Installation"
+    },
+    {
+      "job_id": "JOB3",
+      "location": { "lat": 12.97, "lng": 77.58 },
+      "location_name": "Koramangala",
+      "required_skills": ["electrical"],
+      "priority": "P2",
+      "sla_deadline": "2026-03-16T16:00:00",
+      "estimated_duration_min": 60,
+      "workflow_type": "Breakfix"
+    },
+    {
+      "job_id": "JOB4",
+      "location": { "lat": 12.93, "lng": 77.62 },
+      "location_name": "HSR",
+      "required_skills": ["network"],
+      "priority": "P3",
+      "sla_deadline": "2026-03-16T18:00:00",
+      "estimated_duration_min": 40,
+      "workflow_type": "Installation"
+    },
+    {
+      "job_id": "JOB5",
+      "location": { "lat": 12.91, "lng": 77.60 },
+      "location_name": "ECity",
+      "required_skills": ["fiber"],
+      "priority": "P1",
+      "sla_deadline": "2026-03-16T13:30:00",
+      "estimated_duration_min": 90,
+      "workflow_type": "Breakfix"
+    },
+    {
+      "job_id": "JOB6",
+      "location": { "lat": 12.90, "lng": 77.65 },
+      "location_name": "ECity",
+      "required_skills": ["electrical"],
+      "priority": "P2",
+      "sla_deadline": "2026-03-16T17:00:00",
+      "estimated_duration_min": 50,
+      "workflow_type": "Breakfix"
+    }
+  ]
+}

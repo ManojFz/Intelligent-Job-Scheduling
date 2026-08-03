@@ -1,0 +1,9 @@
+{
+  "name": "route-optimizer-ui",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx serve . -p 4200",
+    "ng": "npx serve . -p 4200"
+  }
+}
